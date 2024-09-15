@@ -73,9 +73,9 @@ debug.usejit=true
 ro.ril.wake_lock_timeout=10000
 ```
 
+> [!NOTE]  
+> - This flag requires kernel support & some plugins.
 ### ¬ Enable Webcam support for OneUI6.0+
 ```
 ro.usb.uvc.enabled=true
 ```
-> [!NOTE]  
-> - this code requires kernel support & plugins.
