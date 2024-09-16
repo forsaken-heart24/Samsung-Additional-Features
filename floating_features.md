@@ -1,7 +1,7 @@
 # Floating Feature Tweaks 🍀
 Add these lines in system/etc/floating_feature.xml (One UI 4.x +)  or vendor/etc/floating_feature.xml (One UI <= 4.1).
 
-## Performance Tweaks
+## Some Useful stuffs.
 
 ### 01. Enable Flagship Launcher Animations
 Search for the following line in floating_feature.xml:
@@ -56,44 +56,7 @@ And change value from "TRUE" to "FALSE" and it should look like the one in the b
 <SEC_FLOATING_FEATURE_FRAMEWORK_SUPPORT_SMOOTH_SCROLL>TRUE</SEC_FLOATING_FEATURE_FRAMEWORK_SUPPORT_SMOOTH_SCROLL>
 ```
 
-## - Dolby Atmos Tweaks 🎶 - 
-
-### 01. Enable Dolby Atmos without Headsets
-- For devices with One UI 4.1 or Higher, you will need to download this version of SoundAlive and Place it in your ```/system/priv-app/SoundAlive*/```. (Backup and Delete your original apk first)
-- Link for the file: <a href="https://cloud.ravindu-deshan.workers.dev/0:/SoundAlive_80.apk">Click here</a>, <a href="https://www.dropbox.com/scl/fi/rnhxcgxgk949g26wl1rop/SoundAlive_80.apk?rlkey=ro9se1gecckrh2yotzpge2j22&dl=0">Mirror</a>
-```
-<SEC_FLOATING_FEATURE_AUDIO_SUPPORT_DUAL_SPEAKER>TRUE</SEC_FLOATING_FEATURE_AUDIO_SUPPORT_DUAL_SPEAKER>
-```
-Search for the following line in floating_feature.xml:
-```
-<SEC_FLOATING_FEATURE_AUDIO_CONFIG_SOUNDALIVE_VERSION>
-```
-And replace which these lines:
-```
-eq_knob,eq_custom,uhq_switch,uhq_level,adapt,spk_stereo,dvfs_860000,tube,concert
-```
-
-### 02. Enable Music Information in AOD
-Search for the following line in floating_feature.xml:
-```
-<SEC_FLOATING_FEATURE_FRAMEWORK_CONFIG_AOD_ITEM>
-```
-And remove "musicoff" line, then it should look like this:
-```
-<SEC_FLOATING_FEATURE_FRAMEWORK_CONFIG_AOD_ITEM>aodversion=7,clearcoveroff</SEC_FLOATING_FEATURE_FRAMEWORK_CONFIG_AOD_ITEM>
-```
-
-### 03. Enable Dolby Atmos in Games
-```
-<SEC_FLOATING_FEATURE_AUDIO_SUPPORT_DEFAULT_ON_DOLBY_IN_GAME>TRUE</SEC_FLOATING_FEATURE_AUDIO_SUPPORT_DEFAULT_ON_DOLBY_IN_GAME>
-```
-
-### 04. Enable Dolby Atmos Game Profiles
-```
-<SEC_FLOATING_FEATURE_AUDIO_SUPPORT_DOLBY_GAME_PROFILE>TRUE</SEC_FLOATING_FEATURE_AUDIO_SUPPORT_DOLBY_GAME_PROFILE>
-```
-
-## Display 📲
+## - Display
 
 ### 01. Enable Flagship Edge Ligthining+ Animations (Needs OneUI 2.x)
 Search for the following line in floating_feature.xml:
@@ -109,6 +72,7 @@ And remove  "-basic_lighting" line, then it should look like this:
 ```
 <SEC_FLOATING_FEATURE_SYSTEMUI_CONFIG_EDGELIGHTING_FRAME_EFFECT>frame_effect</SEC_FLOATING_FEATURE_SYSTEMUI_CONFIG_EDGELIGHTING_FRAME_EFFECT>
 ```
+
 ### 03. Enable AOD Clock Transition Animation
 Search for the following line in floating_feature.xml:
 ```
@@ -118,10 +82,12 @@ And add "clocktransition" and "activeclock=4" in the following line, then it sho
 ```
 <SEC_FLOATING_FEATURE_FRAMEWORK_CONFIG_AOD_ITEM>aodversion=7,clearcoveroff,clocktransition,activeclock=4</SEC_FLOATING_FEATURE_FRAMEWORK_CONFIG_AOD_ITEM>
 ```
+
 ### 04. Enable Multiwindow tray
 ```
 <SEC_FLOATING_FEATURE_COMMON_CONFIG_MULTIWINDOW_TRAY>TRUE</SEC_FLOATING_FEATURE_COMMON_CONFIG_MULTIWINDOW_TRAY>
 ```
+
 ### 05. Make 60Hz as the default refresh rate.
 ```
 <SEC_FLOATING_FEATURE_LCD_CONFIG_HFR_DEFAULT_REFRESH_RATE>60</SEC_FLOATING_FEATURE_LCD_CONFIG_HFR_DEFAULT_REFRESH_RATE>
@@ -130,12 +96,14 @@ And add "clocktransition" and "activeclock=4" in the following line, then it sho
 <SEC_FLOATING_FEATURE_LCD_CONFIG_SELFMASK_VERSION>0</SEC_FLOATING_FEATURE_LCD_CONFIG_SELFMASK_VERSION>
 <SEC_FLOATING_FEATURE_LCD_SUPPORT_SELFMASK>TRUE</SEC_FLOATING_FEATURE_LCD_SUPPORT_SELFMASK>
 ```
+
 ### 06. Enable Advanced Screen Capture (Screen Recorder)
 ```
 <SEC_FLOATING_FEATURE_FRAMEWORK_SUPPORT_SCREEN_CAPTURE_ADVANCED_EDIT_VI>TRUE</SEC_FLOATING_FEATURE_FRAMEWORK_SUPPORT_SCREEN_CAPTURE_ADVANCED_EDIT_VI>
 <SEC_FLOATING_FEATURE_FRAMEWORK_SUPPORT_SCREEN_RECORDER>TRUE</SEC_FLOATING_FEATURE_FRAMEWORK_SUPPORT_SCREEN_RECORDER>
 <SEC_FLOATING_FEATURE_FRAMEWORK_CONFIG_SCREEN_RECORDER_ITEM>-pip</SEC_FLOATING_FEATURE_FRAMEWORK_CONFIG_SCREEN_RECORDER_ITEM>
 ```
+
 ### 07. Enable Partial Blur (Needs OneUI 3.x)
 ```
 <SEC_FLOATING_FEATURE_GRAPHICS_SUPPORT_PARTIAL_BLUR>TRUE</SEC_FLOATING_FEATURE_GRAPHICS_SUPPORT_PARTIAL_BLUR>
@@ -145,19 +113,22 @@ And add "clocktransition" and "activeclock=4" in the following line, then it sho
 ```
 <SEC_FLOATING_FEATURE_GRAPHICS_SUPPORT_CAPTURED_BLUR>TRUE</SEC_FLOATING_FEATURE_GRAPHICS_SUPPORT_CAPTURED_BLUR>
 ```
+
 ### 09. Enable 3 Resolution options in Settings
 > [!NOTE]  
 > - this only works on the older revisions of the oneui (to be exact, it works fine on oneui 2.1 or lesser)
 ```
 <SEC_FLOATING_FEATURE_COMMON_CONFIG_DYN_RESOLUTION_CONTROL>WQHD,FHD,HD</SEC_FLOATING_FEATURE_COMMON_CONFIG_DYN_RESOLUTION_CONTROL>
 ```
+
+### 10. Enable darker Dark Mode (Needs OneUI 2.5)
 > [!NOTE]  
 > - Remember this code won't works after OneUI2.5+ (After OneUI2.5 it's shifted to Bixby routines)
-### 10. Enable darker Dark Mode (Needs OneUI 2.5)
 ```
 <SEC_FLOATING_FEATURE_LCD_CONFIG_REPLACE_COLOR_FOR_DARKMODE>#FF171717</SEC_FLOATING_FEATURE_LCD_CONFIG_REPLACE_COLOR_FOR_DARKMODE>
 ```
-## Miscs 👾
+
+## - Miscs 
 
 ### 01. Enable Side Key Function
 ```
@@ -219,11 +190,13 @@ And change value from "TRUE" to "FALSE.
 ```
 
 ### 08. Enable Drawer Clearer Contrast/Live Blur
+> [!NOTE]  
+> - Live Blur requires it's proper libs and bins to make it working.
+> - Hop into our chats if you want the proper libs and bins.
 ```
 <SEC_FLOATING_FEATURE_GRAPHICS_SUPPORT_3D_SURFACE_TRANSITION_FLAG>TRUE</SEC_FLOATING_FEATURE_GRAPHICS_SUPPORT_3D_SURFACE_TRANSITION_FLAG>
 ```
-> [!NOTE]  
-> - Live Blur requires it's proper libs and bins to make it working.
+
 ### 09. Disable Samsung Ads
 Search for the following line in floating_feature.xml:
 ```
@@ -251,6 +224,8 @@ Change values from 0000 to your needs.
 ```
 
 ### 14. Disable Game Launcher in Drawer
+> [!NOTE]  
+> - Change the value from "FALSE" to "TRUE" if you want to enable it.
 ```
 <SEC_FLOATING_FEATURE_GRAPHICS_SUPPORT_DEFAULT_GAMELAUNCHER_ENABLE>FALSE</SEC_FLOATING_FEATURE_GRAPHICS_SUPPORT_DEFAULT_GAMELAUNCHER_ENABLE>
 ```
@@ -259,12 +234,55 @@ Change values from 0000 to your needs.
 ```
 <SEC_FLOATING_FEATURE_LAUNCHER_CONFIG_ZERO_PAGE_PACKAGE_NAMES>com.google.android.googlequicksearchbox</SEC_FLOATING_FEATURE_LAUNCHER_CONFIG_ZERO_PAGE_PACKAGE_NAMES>
 ```
-### 16. Enable Spotify as added alarm
+
+### 16. Disable Drawer (Needs OneUI version 3 or more)
+```
+<SEC_FLOATING_FEATURE_LAUNCHER_CONFIG_ZERO_PAGE_PACKAGE_NAMES>null</SEC_FLOATING_FEATURE_LAUNCHER_CONFIG_ZERO_PAGE_PACKAGE_NAMES>
+```
+
+### 17. Bring Spotify into the alarm sounds.
 ```
 <SEC_FLOATING_FEATURE_CLOCK_CONFIG_ALARM_SOUND>spotify</SEC_FLOATING_FEATURE_CLOCK_CONFIG_ALARM_SOUND>
 ```
-### 17. Enable Lock screen wallpaper as AOD screen (OneUI 6.0+)
+
+### 18. Enable Lock screen wallpaper as AOD screen (OneUI 6.0+)
 > [!NOTE]  
 > - Requires device resource support.
+```
+<SEC_FLOATING_FEATURE_LCD_CONFIG_AOD_FULLSCREEN>1</SEC_FLOATING_FEATURE_LCD_CONFIG_AOD_FULLSCREEN>
+```
 
-```<SEC_FLOATING_FEATURE_LCD_CONFIG_AOD_FULLSCREEN>1</SEC_FLOATING_FEATURE_LCD_CONFIG_AOD_FULLSCREEN>```
+### 19. Enable Dolby Atmos without Headsets
+- For devices with One UI 4.1 or Higher, you will need to download this version of SoundAlive and Place it in your ```/system/priv-app/SoundAlive*/```. (Backup and Delete your original apk first)
+- Link for the file: <a href="https://cloud.ravindu-deshan.workers.dev/0:/SoundAlive_80.apk">Click here</a> , <a href="https://www.dropbox.com/scl/fi/rnhxcgxgk949g26wl1rop/SoundAlive_80.apk?rlkey=ro9se1gecckrh2yotzpge2j22&dl=0">Mirror</a>
+```
+<SEC_FLOATING_FEATURE_AUDIO_SUPPORT_DUAL_SPEAKER>TRUE</SEC_FLOATING_FEATURE_AUDIO_SUPPORT_DUAL_SPEAKER>
+```
+Search for the following line in floating_feature.xml:
+```
+<SEC_FLOATING_FEATURE_AUDIO_CONFIG_SOUNDALIVE_VERSION>
+```
+And replace which these lines:
+```
+eq_knob,eq_custom,uhq_switch,uhq_level,adapt,spk_stereo,dvfs_860000,tube,concert
+```
+
+### 20. Enable Music Information in AOD
+Search for the following line in floating_feature.xml:
+```
+<SEC_FLOATING_FEATURE_FRAMEWORK_CONFIG_AOD_ITEM>
+```
+And remove "musicoff" line, then it should look like this:
+```
+<SEC_FLOATING_FEATURE_FRAMEWORK_CONFIG_AOD_ITEM>aodversion=7,clearcoveroff</SEC_FLOATING_FEATURE_FRAMEWORK_CONFIG_AOD_ITEM>
+```
+
+### 21. Enable Dolby Atmos in Games
+```
+<SEC_FLOATING_FEATURE_AUDIO_SUPPORT_DEFAULT_ON_DOLBY_IN_GAME>TRUE</SEC_FLOATING_FEATURE_AUDIO_SUPPORT_DEFAULT_ON_DOLBY_IN_GAME>
+```
+
+### 22. Enable Dolby Atmos Game Profiles
+```
+<SEC_FLOATING_FEATURE_AUDIO_SUPPORT_DOLBY_GAME_PROFILE>TRUE</SEC_FLOATING_FEATURE_AUDIO_SUPPORT_DOLBY_GAME_PROFILE>
+```
