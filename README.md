@@ -1,4 +1,4 @@
-# Samsung Additional Features <br>
+# Samsung Additional Features
 <img src="https://telegra.ph/file/5ac41e6a89dbce3b20452.jpg" width="100%">
 > [!NOTE]  
 > - <a href="https://t.me/equinoxfromlunaandetclore/54">if you have any issues or doubts on this how-to-guide, please join our chat to resolve you issues.</a>
