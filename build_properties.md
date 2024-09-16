@@ -6,8 +6,8 @@ Add these lines in Build.prop, which is located in system folder.
 > - and those bootanimation(s) is built for 2340x1080 resolution devices, use it if it works perfectly.
 ### ¬ increase or decrease the bootanimation FPS (useful if you have an bootanimation with more frames)
 ```
-boot.fps=25
-shutdown.fps=25
+boot.fps=xx # should be an integer like 60 or smth lower than it.
+shutdown.fps=xx # should be an integer like 60 or smth lower than it.
 ```
 
 ### ¬ Use Dithering pattern for rendering and playbacks, better display quality but it lowers the overall performance.
