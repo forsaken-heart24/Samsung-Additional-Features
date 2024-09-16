@@ -18,8 +18,17 @@ And change value from "LowEnd" or "Mass" to "HighEnd" (Mass is used widely on th
 ```
 
 ### 03. Nuke system logging stuffs.
+Search for the following line in floating_feature.xml:
+```
+<SEC_FLOATING_FEATURE_CONTACTS_SUPPORT_MESSAGE_LOGS>
+```
+And change value from "TRUE" to "FALSE" and it should look like the one in the below.
+```
 <SEC_FLOATING_FEATURE_CONTACTS_SUPPORT_MESSAGE_LOGS>FALSE</SEC_FLOATING_FEATURE_CONTACTS_SUPPORT_MESSAGE_LOGS>
+```
+```
 <SEC_FLOATING_FEATURE_SYSTEM_CONFIG_SYSINT_DQA_LOGLEVEL>0</SEC_FLOATING_FEATURE_SYSTEM_CONFIG_SYSINT_DQA_LOGLEVEL>
+```
 
 ### 04. Enable Performance Profile
 ```
