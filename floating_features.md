@@ -4,53 +4,52 @@ Add these lines in system/etc/floating_feature.xml (One UI 4.x +)  or vendor/etc
 # Some Useful stuffs :
 
 ### 01. Enable Flagship Launcher Animations
-Search for the following line in floating_feature.xml:
-```
-<SEC_FLOATING_FEATURE_LAUNCHER_CONFIG_ANIMATION_TYPE>
-```
-And change value from "LowEnd" or "Mass" to "HighEnd" (Mass is used widely on the mid-rangers)
+> [!NOTE]  
+> - Search for the following line in floating_feature.xml ```<SEC_FLOATING_FEATURE_LAUNCHER_CONFIG_ANIMATION_TYPE>``` And change value from "LowEnd" or "Mass" to "HighEnd" (Mass is used widely on the mid-rangers)
 ```
 <SEC_FLOATING_FEATURE_LAUNCHER_CONFIG_ANIMATION_TYPE>HighEnd</SEC_FLOATING_FEATURE_LAUNCHER_CONFIG_ANIMATION_TYPE>
 ```
+
 ### 02. Enable Processing Speed
+> [!NOTE]  
+> - Could cause the device to heat and may have bigger battery consuption.
 ```
 <SEC_FLOATING_FEATURE_SYSTEM_SUPPORT_ENHANCED_PROCESSING>TRUE</SEC_FLOATING_FEATURE_SYSTEM_SUPPORT_ENHANCED_PROCESSING>
 ```
 
 ### 03. Nuke system logging stuffs.
-Search for the following line in floating_feature.xml:
-```
-<SEC_FLOATING_FEATURE_CONTACTS_SUPPORT_MESSAGE_LOGS>
-```
-And change value from "TRUE" to "FALSE" and it should look like the one in the below.
+> [!NOTE]  
+> - Search for the following line in floating_feature.xml ```<SEC_FLOATING_FEATURE_CONTACTS_SUPPORT_MESSAGE_LOGS>``` And change value from "TRUE" to "FALSE" and it should look like the one in the below.
 ```
 <SEC_FLOATING_FEATURE_CONTACTS_SUPPORT_MESSAGE_LOGS>FALSE</SEC_FLOATING_FEATURE_CONTACTS_SUPPORT_MESSAGE_LOGS>
 ```
+
+> [!NOTE]  
+> - Besure to add or change the value of the below mentioned flag too.
 ```
 <SEC_FLOATING_FEATURE_SYSTEM_CONFIG_SYSINT_DQA_LOGLEVEL>0</SEC_FLOATING_FEATURE_SYSTEM_CONFIG_SYSINT_DQA_LOGLEVEL>
 ```
 
 ### 04. Enable Performance Profile
+> [!NOTE]  
+> - Could cause the device to heat and may have bigger battery consuption.
 ```
 <SEC_FLOATING_FEATURE_SYSTEM_SUPPORT_LOW_HEAT_MODE>TRUE</SEC_FLOATING_FEATURE_SYSTEM_SUPPORT_LOW_HEAT_MODE>
 ```
 
 ### 05. Enable High Performance Mode
+> [!NOTE]  
+> - Could cause the device to heat and may have bigger battery consuption.
 ```
 <SEC_FLOATING_FEATURE_COMMON_SUPPORT_HIGH_PERFORMANCE_MODE>TRUE</SEC_FLOATING_FEATURE_COMMON_SUPPORT_HIGH_PERFORMANCE_MODE>
 <SEC_FLOATING_FEATURE_SYSTEM_SUPPORT_ENHANCED_CPU_RESPONSIVENESS>TRUE</SEC_FLOATING_FEATURE_SYSTEM_SUPPORT_ENHANCED_CPU_RESPONSIVENESS>
 ```
 
 ### 06. Enable Extra Screen Modes (Might break the original amoled colors)
+> [!NOTE]  
+> Step 1 - Search for this line ```<SEC_FLOATING_FEATURE_LCD_SUPPORT_MDNIE_HW>``` and make it's value from "TRUE" to "FALSE"
+> Step 2 - Search for this line ```<SEC_FLOATING_FEATURE_LCD_SUPPORT_WIDE_COLOR_GAMUT>``` and make it's value from "TRUE" to "FALSE"
 
-01. Search for this line and make its value ```FALSE```
-```
-<SEC_FLOATING_FEATURE_LCD_SUPPORT_MDNIE_HW>
-```
-02. Search for this line and make its value ```FALSE```
-```
-<SEC_FLOATING_FEATURE_LCD_SUPPORT_WIDE_COLOR_GAMUT>
-```
 ### 07. Enable Smooth Scroll of Surface Flinger
 ```
 <SEC_FLOATING_FEATURE_FRAMEWORK_SUPPORT_SMOOTH_SCROLL>TRUE</SEC_FLOATING_FEATURE_FRAMEWORK_SUPPORT_SMOOTH_SCROLL>
@@ -58,12 +57,9 @@ And change value from "TRUE" to "FALSE" and it should look like the one in the b
 
 # Display :
 
-### 01. Enable Flagship Edge Ligthining+ Animations (Needs OneUI 2.x)
-Search for the following line in floating_feature.xml:
-```
-<SEC_FLOATING_FEATURE_COMMON_CONFIG_EDGE>
-```
-And remove  "-basic_lighting" line, then it should look like this:
+### 01. Enable Flagship Edge Lighting+ Animations (Needs OneUI 2.x)
+> [!NOTE]  
+> - Search for the following line in floating_feature.xml ```<SEC_FLOATING_FEATURE_COMMON_CONFIG_EDGE>``` And remove  "-basic_lighting" line, then it should look like the one below.
 ```
 <SEC_FLOATING_FEATURE_COMMON_CONFIG_EDGE>people,task,circle,panel,-edgefeeds,edgelighting_v2,debug,cornerR:6.2,search,phonecolor,dot_bottom</SEC_FLOATING_FEATURE_COMMON_CONFIG_EDGE>
 ```
@@ -74,11 +70,8 @@ And remove  "-basic_lighting" line, then it should look like this:
 ```
 
 ### 03. Enable AOD Clock Transition Animation
-Search for the following line in floating_feature.xml:
-```
-<SEC_FLOATING_FEATURE_FRAMEWORK_CONFIG_AOD_ITEM>
-```
-And add "clocktransition" and "activeclock=4" in the following line, then it should look like this:
+> [!NOTE]  
+> - Search for the following line in floating_feature.xml ```<SEC_FLOATING_FEATURE_FRAMEWORK_CONFIG_AOD_ITEM>``` And add "clocktransition" and "activeclock=4" in the following line, then it should look like the one below.
 ```
 <SEC_FLOATING_FEATURE_FRAMEWORK_CONFIG_AOD_ITEM>aodversion=7,clearcoveroff,clocktransition,activeclock=4</SEC_FLOATING_FEATURE_FRAMEWORK_CONFIG_AOD_ITEM>
 ```
@@ -135,19 +128,16 @@ And add "clocktransition" and "activeclock=4" in the following line, then it sho
 <SEC_FLOATING_FEATURE_SETTINGS_SUPPORT_FUNCTION_KEY_MENU>TRUE</SEC_FLOATING_FEATURE_SETTINGS_SUPPORT_FUNCTION_KEY_MENU>
 ```
 
-### 02. the device model name, commonly used that to show the ROM'S name.
-Search for the following line in floating_feature.xml:
-```
-<SEC_FLOATING_FEATURE_SETTINGS_CONFIG_BRAND_NAME>
-```
-and edit the " Galaxy A/M/F x x  " to something like the one below.
+### 02. The Device Model Name, commonly used that to show the ROM'S name.
+> [!NOTE]  
+> - Search for the following line in floating_feature.xml ```<SEC_FLOATING_FEATURE_SETTINGS_CONFIG_BRAND_NAME>``` and edit the " Galaxy A/M/F x x  " to something like the one below.
 ```
 <SEC_FLOATING_FEATURE_SETTINGS_CONFIG_BRAND_NAME>equinoX - Alpha Centauri</SEC_FLOATING_FEATURE_SETTINGS_CONFIG_BRAND_NAME>
 ```
 
 ### 03. Enable Wireless PowerShare
 > [!NOTE]  
-> - it won't work without the proper hardware support.
+> - it won't work without proper hardware support.
 ```
 <SEC_FLOATING_FEATURE_BATTERY_SUPPORT_HV>TRUE</SEC_FLOATING_FEATURE_BATTERY_SUPPORT_HV>
 <SEC_FLOATING_FEATURE_BATTERY_SUPPORT_WIRELESS_HV>TRUE</SEC_FLOATING_FEATURE_BATTERY_SUPPORT_WIRELESS_HV>
@@ -253,8 +243,9 @@ Change values from 0000 to your needs.
 ```
 
 ### 19. Enable Dolby Atmos without Headsets
-- For devices with One UI 4.1 or Higher, you will need to download this version of SoundAlive and Place it in your ```/system/priv-app/SoundAlive*/```. (Backup and Delete your original apk first)
-- Link for the file: <a href="https://cloud.ravindu-deshan.workers.dev/0:/SoundAlive_80.apk">Click here</a> , <a href="https://www.dropbox.com/scl/fi/rnhxcgxgk949g26wl1rop/SoundAlive_80.apk?rlkey=ro9se1gecckrh2yotzpge2j22&dl=0">Mirror</a>
+> [!NOTE]  
+> - For devices with One UI 4.1 or Higher, you will need to download this version of SoundAlive and Place it in your ```/system/priv-app/SoundAlive*/``` (Backup and Delete your original apk first)
+> - Link for the file: <a href="https://cloud.ravindu-deshan.workers.dev/0:/SoundAlive_80.apk">Click here</a> & <a href="https://www.dropbox.com/scl/fi/rnhxcgxgk949g26wl1rop/SoundAlive_80.apk?rlkey=ro9se1gecckrh2yotzpge2j22&dl=0">Click here for the mirror</a>
 ```
 <SEC_FLOATING_FEATURE_AUDIO_SUPPORT_DUAL_SPEAKER>TRUE</SEC_FLOATING_FEATURE_AUDIO_SUPPORT_DUAL_SPEAKER>
 ```

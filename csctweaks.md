@@ -239,12 +239,19 @@
 <CscFeature_Music_SupportPlaybackDuringCall>TRUE</CscFeature_Music_SupportPlaybackDuringCall>
 ```
 
-### - Bring back the apk category on the Samsung MyFiles app.
+### ¬ Bring back the apk category on the Samsung MyFiles app.
 ```
 <CscFeature_MyFiles_SupportApkCategory>TRUE</CscFeature_MyFiles_SupportApkCategory>
 ```
 
-### - Disable Setup Wizard
+### ¬ Disable Setup Wizard
 ```
 <CscFeature_SetupWizard_DisablePrivacyPolicyAgreement>TRUE</CscFeature_SetupWizard_DisablePrivacyPolicyAgreement>
 ```			
+
+### ¬ Enable Applock on those weird devices
+> [!NOTE]  
+> - just add this in the csc file, it should work, better install this <a href="https://t.me/SamsungTweaks/61">module</a> together to enable applock.
+```
+<CscFeature_SmartManager_ConfigSubFeatures>applock</CscFeature_SmartManager_ConfigSubFeatures>
+```
