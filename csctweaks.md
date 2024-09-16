@@ -1,6 +1,4 @@
 # CSC (Country Service Code) Feature Tweaks
-> [!NOTE]  
-
 > - if you have an dynamic partition styled device, you have to add these stuffs into the optics/configs/carriers/(your carrier/region, ex ATT)/conf/cscfeature.xml
 
 > - if incase you have the older a-only slot device, you have to add those into the product/omc/(your carrier/region, ex ATT)/conf/cscfeature.xml
