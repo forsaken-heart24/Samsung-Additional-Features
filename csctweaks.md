@@ -51,7 +51,7 @@
 
 ### ¬ Switches the 4G icon (value can be CHC, TGY, VZW, ATT, SPR, each one has different 4G icon)
 > [!NOTE]  
-> - Special Thanks To <a href="https://xdaforums.com/t/csc-feature-mods.4538389/">Samuel For this post on XDA</a>
+> - <a href="https://xdaforums.com/t/csc-feature-mods.4538389/">Special Thanks To Samuel For this post on XDA</a>
 ```
 <CscFeature_SystemUI_ConfigOpBrandingForIndicatorIcon>CHC</CscFeature_SystemUI_ConfigOpBrandingForIndicatorIcon>
 ```
