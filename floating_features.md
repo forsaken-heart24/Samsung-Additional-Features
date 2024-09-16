@@ -56,7 +56,7 @@ And change value from "TRUE" to "FALSE" and it should look like the one in the b
 <SEC_FLOATING_FEATURE_FRAMEWORK_SUPPORT_SMOOTH_SCROLL>TRUE</SEC_FLOATING_FEATURE_FRAMEWORK_SUPPORT_SMOOTH_SCROLL>
 ```
 
-# Display
+# Display :
 
 ### 01. Enable Flagship Edge Ligthining+ Animations (Needs OneUI 2.x)
 Search for the following line in floating_feature.xml:
@@ -128,7 +128,7 @@ And add "clocktransition" and "activeclock=4" in the following line, then it sho
 <SEC_FLOATING_FEATURE_LCD_CONFIG_REPLACE_COLOR_FOR_DARKMODE>#FF171717</SEC_FLOATING_FEATURE_LCD_CONFIG_REPLACE_COLOR_FOR_DARKMODE>
 ```
 
-# Miscs 
+# Miscellaneous :
 
 ### 01. Enable Side Key Function
 ```
