@@ -1,4 +1,4 @@
-# System Build property Tweaks
+# System Build Property Tweaks
 Add these lines in Build.prop, which is located in system folder.
 
 > - We have some good bootanimations here, like <a href="https://github.com/forsaken-heart24/FLOSSIS/blob/main/ROG_bootanimation.tar.gz">ROG</a> and one from the <a href="https://github.com/forsaken-heart24/FLOSSIS/blob/main/Cyberpunk.tar.gz">oneplus cyberpunk edition</a> (you have to extract and copy it over by yourself) and those bootanimation(s) is built for 2340x1080 resolution devices, use it if it works perfectly.
