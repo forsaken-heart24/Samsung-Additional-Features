@@ -1,8 +1,13 @@
 # CSC (Country Service Code) Feature Tweaks
-- Add some of the lines that you wanna add it in the product/omc/(your region, ex ATT)/config or if you have an dynamic partition styled devices add these lines in the optics/configs/carriers/(your carrier, ex ATT)/conf.
-- In Higher One UI versions, you need to decrypt > edit > encrypt the cscfeature.xml. So <a href="https://github.com/forsaken-heart24/OMCDecoder">use this tool to decode your csc file.</a>
-## ‼️ Don't add anything unless you don't know what are you doing and what those added code(s) does, cuz it might crash some stuffs on the system.
-<hr>
+> [!NOTE]  
+
+> - if you have an dynamic partition styled device, you have to add these stuffs into the optics/configs/carriers/(your carrier/region, ex ATT)/conf/cscfeature.xml
+
+> - if incase you have the older a-only slot device, you have to add those into the product/omc/(your carrier/region, ex ATT)/conf/cscfeature.xml
+
+> - In Higher One UI versions, you need to decrypt the cscfeature.xml and encrypt it after editing it, So <a href="https://github.com/forsaken-heart24/OMCDecoder">use this tool to decode & encrypt your csc file.</a>
+
+> - Don't add anything unless you don't know what are you doing and what those added code(s) does, cuz it might crash some stuffs on the system.
 
 ### ¬ Data Icon Style (4G+) 
 ```
@@ -47,10 +52,11 @@
 ```
 
 ### ¬ Switches the 4G icon (value can be CHC, TGY, VZW, ATT, SPR, each one has different 4G icon)
+> [!NOTE]  
+> - Special Thanks To : <a href="https://t.me/Hiruka_NU">Hiruka</a> | <a href="https://xdaforums.com/t/csc-feature-mods.4538389/"> For this post on XDA </a> | <a href="https://t.me/samuel9611">Samuel</a>
 ```
 <CscFeature_SystemUI_ConfigOpBrandingForIndicatorIcon>CHC</CscFeature_SystemUI_ConfigOpBrandingForIndicatorIcon>
 ```
-<hr> - Special Thanks To : <a href="https://t.me/Hiruka_NU">Hiruka NU</a> | <a href="https://xdaforums.com/t/csc-feature-mods.4538389/"> This post on XDA </a> | <a href="https://t.me/samuel9611">Samuel</a><br><hr>
 
 ### ¬ Force the network icon to show 5 bars (Useless for some regions)
 ```
@@ -93,7 +99,8 @@
 ```
 <CscFeature_Setting_SupportRealTimeNetworkSpeed>TRUE</CscFeature_Setting_SupportRealTimeNetworkSpeed>
 ```
-- For One UI 6 and up, you will need this line too:
+> [!NOTE]  
+> - For One UI 6 and up, you will need this line too:
 ```
 <CscFeature_Common_SupportZProjectFunctionInGlobal>TRUE</CscFeature_Common_SupportZProjectFunctionInGlobal>
 ```
@@ -254,4 +261,4 @@
 > - just add this in the csc file, it should work, better install this <a href="https://t.me/SamsungTweaks/61">module</a> together to enable applock.
 ```
 <CscFeature_SmartManager_ConfigSubFeatures>applock</CscFeature_SmartManager_ConfigSubFeatures>
-```
+```	

@@ -12,7 +12,7 @@ Add these lines in system/etc/floating_feature.xml (One UI 4.x +)  or vendor/etc
 
 ### 02. Enable Processing Speed
 > [!NOTE]  
-> - Could cause the device to heat and may have bigger battery consuption.
+> - Could cause the device to overheat and may have bigger battery consuption.
 ```
 <SEC_FLOATING_FEATURE_SYSTEM_SUPPORT_ENHANCED_PROCESSING>TRUE</SEC_FLOATING_FEATURE_SYSTEM_SUPPORT_ENHANCED_PROCESSING>
 ```
@@ -32,14 +32,14 @@ Add these lines in system/etc/floating_feature.xml (One UI 4.x +)  or vendor/etc
 
 ### 04. Enable Performance Profile
 > [!NOTE]  
-> - Could cause the device to heat and may have bigger battery consuption.
+> - Could cause the device to overheat and may have bigger battery consuption.
 ```
 <SEC_FLOATING_FEATURE_SYSTEM_SUPPORT_LOW_HEAT_MODE>TRUE</SEC_FLOATING_FEATURE_SYSTEM_SUPPORT_LOW_HEAT_MODE>
 ```
 
 ### 05. Enable High Performance Mode
 > [!NOTE]  
-> - Could cause the device to heat and may have bigger battery consuption.
+> - Could cause the device to overheat and may have bigger battery consuption.
 ```
 <SEC_FLOATING_FEATURE_COMMON_SUPPORT_HIGH_PERFORMANCE_MODE>TRUE</SEC_FLOATING_FEATURE_COMMON_SUPPORT_HIGH_PERFORMANCE_MODE>
 <SEC_FLOATING_FEATURE_SYSTEM_SUPPORT_ENHANCED_CPU_RESPONSIVENESS>TRUE</SEC_FLOATING_FEATURE_SYSTEM_SUPPORT_ENHANCED_CPU_RESPONSIVENESS>
