@@ -116,7 +116,7 @@ Add these lines in system/etc/floating_feature.xml (One UI 4.x +)  or vendor/etc
 
 ### 10. Enable darker Dark Mode (Needs OneUI 2.5)
 > [!NOTE]  
-> - Remember this code won't works after OneUI2.5+ (After OneUI2.5 it's shifted to Bixby routines)
+> - Remember this code won't work after OneUI2.5+ (it's shifted to Bixby routines now.)
 ```
 <SEC_FLOATING_FEATURE_LCD_CONFIG_REPLACE_COLOR_FOR_DARKMODE>#FF171717</SEC_FLOATING_FEATURE_LCD_CONFIG_REPLACE_COLOR_FOR_DARKMODE>
 ```
@@ -143,10 +143,6 @@ Add these lines in system/etc/floating_feature.xml (One UI 4.x +)  or vendor/etc
 <SEC_FLOATING_FEATURE_BATTERY_SUPPORT_WIRELESS_HV>TRUE</SEC_FLOATING_FEATURE_BATTERY_SUPPORT_WIRELESS_HV>
 <SEC_FLOATING_FEATURE_BATTERY_SUPPORT_WIRELESS_NIGHT_MODE>TRUE</SEC_FLOATING_FEATURE_BATTERY_SUPPORT_WIRELESS_NIGHT_MODE>
 <SEC_FLOATING_FEATURE_BATTERY_SUPPORT_WIRELESS_TX>TRUE</SEC_FLOATING_FEATURE_BATTERY_SUPPORT_WIRELESS_TX>
-<SEC_FLOATING_FEATURE_COMMON_CONFIG_DEX_MODE>dual,wireless,dexforpc</SEC_FLOATING_FEATURE_COMMON_CONFIG_DEX_MODE>
-<SEC_FLOATING_FEATURE_COMMON_SUPPORT_DEX_WIRELESS>TRUE</SEC_FLOATING_FEATURE_COMMON_SUPPORT_DEX_WIRELESS>
-<SEC_FLOATING_FEATURE_COMMON_SUPPORT_DEX_MULTI_RATIO>TRUE</SEC_FLOATING_FEATURE_COMMON_SUPPORT_DEX_MULTI_RATIO>
-<SEC_FLOATING_FEATURE_COMMON_SUPPORT_DEX_ON_PC>TRUE</SEC_FLOATING_FEATURE_COMMON_SUPPORT_DEX_ON_PC>
 ```
 
 ### 04. Enable Ultra Power Saving
@@ -181,8 +177,8 @@ And change value from "TRUE" to "FALSE.
 
 ### 08. Enable Drawer Clearer Contrast/Live Blur
 > [!NOTE]  
-> - Live Blur requires it's proper libs and bins to make it working.
-> - Hop into our chats if you want the proper libs and bins.
+> - Live Blur requires proper system support to make it working.
+> - Hop into our chats if you want the live blur.
 ```
 <SEC_FLOATING_FEATURE_GRAPHICS_SUPPORT_3D_SURFACE_TRANSITION_FLAG>TRUE</SEC_FLOATING_FEATURE_GRAPHICS_SUPPORT_3D_SURFACE_TRANSITION_FLAG>
 ```
@@ -236,8 +232,6 @@ Change values from 0000 to your needs.
 ```
 
 ### 18. Enable Lock screen wallpaper as AOD screen (OneUI 6.0+)
-> [!NOTE]  
-> - Requires device resource support.
 ```
 <SEC_FLOATING_FEATURE_LCD_CONFIG_AOD_FULLSCREEN>1</SEC_FLOATING_FEATURE_LCD_CONFIG_AOD_FULLSCREEN>
 ```
