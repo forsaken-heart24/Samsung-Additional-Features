@@ -1,11 +1,14 @@
 # Floating Feature Tweaks 🍀
 Add these lines in system/etc/floating_feature.xml (One UI 4.x +)  or vendor/etc/floating_feature.xml (One UI <= 4.1).
 
+> [!NOTE]
+> - Feature compatibility is based on OS(OPERATING SYSTEM).
+
 # Some Useful stuffs :
 
 ### 01. Enable Flagship Launcher Animations
 > [!NOTE]  
-> - Search for the following line in floating_feature.xml ```<SEC_FLOATING_FEATURE_LAUNCHER_CONFIG_ANIMATION_TYPE>``` And change value from "LowEnd" or "Mass" to "HighEnd" (Mass is used widely on the mid-rangers)
+> - Search for the following line in floating_feature.xml ```<SEC_FLOATING_FEATURE_LAUNCHER_CONFIG_ANIMATION_TYPE>``` And change value from "LowEnd" or "Mass" to "HighEnd" (Mass is used widely on the mid-rangers & discontinued after OneUI6)
 ```
 <SEC_FLOATING_FEATURE_LAUNCHER_CONFIG_ANIMATION_TYPE>HighEnd</SEC_FLOATING_FEATURE_LAUNCHER_CONFIG_ANIMATION_TYPE>
 ```
@@ -19,7 +22,7 @@ Add these lines in system/etc/floating_feature.xml (One UI 4.x +)  or vendor/etc
 
 ### 03. Nuke system logging stuffs.
 > [!NOTE]  
-> - Search for the following line in floating_feature.xml ```<SEC_FLOATING_FEATURE_CONTACTS_SUPPORT_MESSAGE_LOGS>``` And change value from "TRUE" to "FALSE" and it should look like the one in the below.
+> - Part of system logging, Search for the following line in floating_feature.xml (Discontinued after OneUI5)```<SEC_FLOATING_FEATURE_CONTACTS_SUPPORT_MESSAGE_LOGS>``` And change value from "TRUE" to "FALSE" and it should look like the one in the below.
 ```
 <SEC_FLOATING_FEATURE_CONTACTS_SUPPORT_MESSAGE_LOGS>FALSE</SEC_FLOATING_FEATURE_CONTACTS_SUPPORT_MESSAGE_LOGS>
 ```
@@ -45,7 +48,7 @@ Add these lines in system/etc/floating_feature.xml (One UI 4.x +)  or vendor/etc
 <SEC_FLOATING_FEATURE_SYSTEM_SUPPORT_ENHANCED_CPU_RESPONSIVENESS>TRUE</SEC_FLOATING_FEATURE_SYSTEM_SUPPORT_ENHANCED_CPU_RESPONSIVENESS>
 ```
 
-### 06. Enable Extra Screen Modes (Might break the original amoled colors)
+### 06. Enable Extra Screen Modes (Might break the original amoled colors, Discontinued after OneUI6.1 may have bootloop issue if you try it on OneUI6.1+ ROMs & Requires mdNIE support to it be functional.)
 > [!NOTE]  
 > Step 1 - Search for this line ```<SEC_FLOATING_FEATURE_LCD_SUPPORT_MDNIE_HW>``` and make it's value from "TRUE" to "FALSE"
 > Step 2 - Search for this line ```<SEC_FLOATING_FEATURE_LCD_SUPPORT_WIDE_COLOR_GAMUT>``` and make it's value from "TRUE" to "FALSE"
@@ -204,6 +207,8 @@ And change value from "TRUE" to "FALSE.
 ```
 
 ### 13. Change battery capacity
+> - [!Note]
+> - It is also discontinued after OneUI3 (some still had it functional).
 Change values from 0000 to your needs.
 ```
 <SEC_FLOATING_FEATURE_SETTINGS_CONFIG_BATTERY_CAPACITY>0000 mAh</SEC_FLOATING_FEATURE_SETTINGS_CONFIG_BATTERY_CAPACITY>
