@@ -40,6 +40,11 @@ persist.debug.atrace.boottrace=0
 persist.log.ewlogd=0
 ```
 
+### Disables unnecessary debugging
+```
+persist.sys.lmk.reportkills=false
+```
+
 ### ¬ Video Acceleration Enabled And HW debugging (Will improve playback performance)
 ```
 debug.hwui.renderer=skiagl
