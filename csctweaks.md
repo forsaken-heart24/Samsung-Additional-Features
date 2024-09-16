@@ -51,7 +51,7 @@
 
 ### ¬ Switches the 4G icon (value can be CHC, TGY, VZW, ATT, SPR, each one has different 4G icon)
 > [!NOTE]  
-> - Special Thanks To : <a href="https://t.me/Hiruka_NU">Hiruka</a> | <a href="https://xdaforums.com/t/csc-feature-mods.4538389/"> For this post on XDA </a> | <a href="https://t.me/samuel9611">Samuel</a>
+> - Special Thanks To : <a href="https://t.me/Hiruka_NU">Hiruka</a> <a href="https://xdaforums.com/t/csc-feature-mods.4538389/"> For this post on XDA </a> & <a href="https://t.me/samuel9611">Samuel</a>
 ```
 <CscFeature_SystemUI_ConfigOpBrandingForIndicatorIcon>CHC</CscFeature_SystemUI_ConfigOpBrandingForIndicatorIcon>
 ```
@@ -80,7 +80,6 @@
 <CscFeature_Camera_CamcoderForceShutterSoundDuringSnapShot>FALSE</CscFeature_Camera_CamcoderForceShutterSoundDuringSnapShot>
 <CscFeature_Camera_CamcorderEnablePromptPopupToSelectRecMode>TRUE</CscFeature_Camera_CamcorderEnablePromptPopupToSelectRecMode>
 <CscFeature_Camcorder_DoNotPauseMusic>TRUE</CscFeature_Camcorder_DoNotPauseMusic>
-<CscFeature_Camcorder_DefaultQuality>superfine</CscFeature_Camcorder_DefaultQuality>
 ```
 
 ### ¬ Switches the Data icon style to the LTE icon.
