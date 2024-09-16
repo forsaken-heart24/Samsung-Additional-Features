@@ -17,13 +17,13 @@
 <CscFeature_Camera_ShutterSoundMenu>TRUE</CscFeature_Camera_ShutterSoundMenu>
 ```
 
-### ¬ image quality enhancer
+### ¬ Image quality enhancer
 ```
 <CscFeature_Common_EnhanceImageQuality>TRUE</CscFeature_Common_EnhanceImageQuality>
 <CscFeature_Camera_DefaultQuality>superfine</CscFeature_Camera_DefaultQuality>
 ```
 
-### ¬ bring mobile data toggle on the power menu context
+### ¬ Bring mobile data toggle on the power menu context
 ```
 <CscFeature_Framework_SupportDataModeSwitchGlobalAction>TRUE</CscFeature_Framework_SupportDataModeSwitchGlobalAction>
 ```
@@ -33,7 +33,7 @@
 <CscFeature_LockScreen_ConfigCarrierTextPolicy>DisplayUsimText;DisplayPlmnOnBottom</CscFeature_LockScreen_ConfigCarrierTextPolicy>
 ```
 
-### ¬ bring useful cards menu in Samsung Messages
+### ¬ Bring useful cards menu in Samsung Messages
 ```
 <CscFeature_Message_SupportUsefulcard>TRUE</CscFeature_Message_SupportUsefulcard>
 ```
