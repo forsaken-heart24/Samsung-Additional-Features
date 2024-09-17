@@ -276,3 +276,16 @@ And remove "musicoff" line, then it should look like this:
 ```
 <SEC_FLOATING_FEATURE_AUDIO_SUPPORT_DOLBY_GAME_PROFILE>TRUE</SEC_FLOATING_FEATURE_AUDIO_SUPPORT_DOLBY_GAME_PROFILE>
 ```
+### 23. Relumino outline (ONEUI6.1 Special)
+> - [NOTE]
+> - This is found on Settings ~ Accessibility ~ Visability Enhancements.
+```
+<SEC_FLOATING_FEATURE_GRAPHICS_SUPPORT_RELUMINO_EFFECT_FLAG>TRUE</SEC_FLOATING_FEATURE_GRAPHICS_SUPPORT_RELUMINO_EFFECT_FLAG>
+```
+### 24. Battery BSOH settings
+> - [NOTE]
+> - All credit goes to UNICA
+> - Settings ~ About Phone / Tablet ~ Battery Information.
+```
+<SEC_FLOATING_FEATURE_BATTERY_SUPPORT_BSOH_SETTINGS>TRUE</SEC_FLOATING_FEATURE_BATTERY_SUPPORT_BSOH_SETTINGS>
+```
