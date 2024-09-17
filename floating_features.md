@@ -1,5 +1,5 @@
 # Floating Feature Tweaks 🍀
-Add these lines in system/etc/floating_feature.xml (One UI 4.x +)  or vendor/etc/floating_feature.xml (One UI <= 4.1).
+Add these lines in system/etc/floating_feature.xml (One UI 4 or higher) or vendor/etc/floating_feature.xml (deprecated One UI 4 or lower oneui revisions.).
 
 > [!NOTE]
 > - Feature compatibility is based on OS(OPERATING SYSTEM).
@@ -8,7 +8,7 @@ Add these lines in system/etc/floating_feature.xml (One UI 4.x +)  or vendor/etc
 
 ### 01. Enable Flagship Launcher Animations
 > [!NOTE]  
-> - Search for the following line in floating_feature.xml ```<SEC_FLOATING_FEATURE_LAUNCHER_CONFIG_ANIMATION_TYPE>``` And change value from "LowEnd" or "Mass" to "HighEnd" (Mass is used widely on the mid-rangers & discontinued after OneUI6)
+> - Search for the following line in floating_feature.xml ```<SEC_FLOATING_FEATURE_LAUNCHER_CONFIG_ANIMATION_TYPE>``` And change value from "LowEnd" or "Mass" to "HighEnd" (Mass is used widely on the mid-rangers & discontinued after OneUI 6)
 ```
 <SEC_FLOATING_FEATURE_LAUNCHER_CONFIG_ANIMATION_TYPE>HighEnd</SEC_FLOATING_FEATURE_LAUNCHER_CONFIG_ANIMATION_TYPE>
 ```
@@ -48,12 +48,24 @@ Add these lines in system/etc/floating_feature.xml (One UI 4.x +)  or vendor/etc
 <SEC_FLOATING_FEATURE_SYSTEM_SUPPORT_ENHANCED_CPU_RESPONSIVENESS>TRUE</SEC_FLOATING_FEATURE_SYSTEM_SUPPORT_ENHANCED_CPU_RESPONSIVENESS>
 ```
 
-### 06. Enable Extra Screen Modes (Might break the original amoled colors, Discontinued after OneUI6.1 may have bootloop issue if you try it on OneUI6.1+ ROMs & Requires mdNIE support to it be functional.)
+### 06. Enable Extra Screen Modes (Might break the original amoled colors, and it got discontinued after the OneUI 6.0 revision and it might put your ROM into an bootloop if you try it
 > [!NOTE]  
+> This feature requires mdNIE support on the ROM and maybe the device to get it workin' under the hood!
+> if you device have any of those screen modes mentined below, it means that it might have an proper mdNIE feature.
+> - Adaptive display
+> - AMOLED cinema
+> - AMOLED photo
+> - Basic
+> - Vivid
+> and finally if you of the modes are not found under the screen modes settings on the display settings it means that it has the mdNIE support at bare minimum.
+
+> Anyways, let's get into how to get this thing in your device -
+
 > Step 1 - Search for this line ```<SEC_FLOATING_FEATURE_LCD_SUPPORT_MDNIE_HW>``` and make it's value from "TRUE" to "FALSE"
+
 > Step 2 - Search for this line ```<SEC_FLOATING_FEATURE_LCD_SUPPORT_WIDE_COLOR_GAMUT>``` and make it's value from "TRUE" to "FALSE"
 
-### 07. Enable Smooth Scroll of Surface Flinger
+### 07. Enable Smooth Scroll of the Surfaceflinger
 ```
 <SEC_FLOATING_FEATURE_FRAMEWORK_SUPPORT_SMOOTH_SCROLL>TRUE</SEC_FLOATING_FEATURE_FRAMEWORK_SUPPORT_SMOOTH_SCROLL>
 ```
@@ -119,7 +131,7 @@ Add these lines in system/etc/floating_feature.xml (One UI 4.x +)  or vendor/etc
 
 ### 10. Enable darker Dark Mode (Needs OneUI 2.5)
 > [!NOTE]  
-> - Remember this code won't work after OneUI2.5+ (it's shifted to Bixby routines now.)
+> - Remember this code won't work after OneUI2.5+ (it's shifted to Bixby routines after that)
 ```
 <SEC_FLOATING_FEATURE_LCD_CONFIG_REPLACE_COLOR_FOR_DARKMODE>#FF171717</SEC_FLOATING_FEATURE_LCD_CONFIG_REPLACE_COLOR_FOR_DARKMODE>
 ```
@@ -181,7 +193,8 @@ And change value from "TRUE" to "FALSE.
 ### 08. Enable Drawer Clearer Contrast/Live Blur
 > [!NOTE]  
 > - Live Blur requires proper system support to make it working.
-> - Hop into our chats if you want the live blur.
+> - Hop into our chats if you want the true live blur. 
+> - might have performance issues if you enable this feature on lower or an good mid-ranger
 ```
 <SEC_FLOATING_FEATURE_GRAPHICS_SUPPORT_3D_SURFACE_TRANSITION_FLAG>TRUE</SEC_FLOATING_FEATURE_GRAPHICS_SUPPORT_3D_SURFACE_TRANSITION_FLAG>
 ```
@@ -208,7 +221,7 @@ And change value from "TRUE" to "FALSE.
 
 ### 13. Change battery capacity
 > - [!Note]
-> - It is also discontinued after OneUI3 (some still had it functional).
+> - It's deprecated after the One UI 3.1.
 Change values from 0000 to your needs.
 ```
 <SEC_FLOATING_FEATURE_SETTINGS_CONFIG_BATTERY_CAPACITY>0000 mAh</SEC_FLOATING_FEATURE_SETTINGS_CONFIG_BATTERY_CAPACITY>
@@ -241,10 +254,10 @@ Change values from 0000 to your needs.
 <SEC_FLOATING_FEATURE_LCD_CONFIG_AOD_FULLSCREEN>1</SEC_FLOATING_FEATURE_LCD_CONFIG_AOD_FULLSCREEN>
 ```
 
-### 19. Enable Dolby Atmos without Headsets
+### 19. Enable Dolby Atmos without earphones / headsets.
 > [!NOTE]  
-> - For devices with One UI 4.1 or Higher, you will need to download this version of SoundAlive and Place it in your ```/system/priv-app/SoundAlive*/``` (Backup and Delete your original apk first)
-> - Link for the file: <a href="https://cloud.ravindu-deshan.workers.dev/0:/SoundAlive_80.apk">Click here</a> & <a href="https://www.dropbox.com/scl/fi/rnhxcgxgk949g26wl1rop/SoundAlive_80.apk?rlkey=ro9se1gecckrh2yotzpge2j22&dl=0">Click here for the mirror</a>
+> - For devices with One UI 4.1 or Higher, you have to download the mentioned version of SoundAlive and Place it in your ```/system/priv-app/SoundAlive*/``` (take a backup of the original file and replace it with this mentioned version on your rom)
+> - Link for the file: <a href="https://cloud.ravindu-deshan.workers.dev/0:/SoundAlive_80.apk">Click here if you want the direct download link</a> & <a href="https://www.dropbox.com/scl/fi/rnhxcgxgk949g26wl1rop/SoundAlive_80.apk?rlkey=ro9se1gecckrh2yotzpge2j22&dl=0">Click here for the mirrored link</a>
 ```
 <SEC_FLOATING_FEATURE_AUDIO_SUPPORT_DUAL_SPEAKER>TRUE</SEC_FLOATING_FEATURE_AUDIO_SUPPORT_DUAL_SPEAKER>
 ```
@@ -276,16 +289,18 @@ And remove "musicoff" line, then it should look like this:
 ```
 <SEC_FLOATING_FEATURE_AUDIO_SUPPORT_DOLBY_GAME_PROFILE>TRUE</SEC_FLOATING_FEATURE_AUDIO_SUPPORT_DOLBY_GAME_PROFILE>
 ```
-### 23. Relumino outline (ONEUI6.1 Special)
+
+### 23. Relumino outline (OneUI 6.1 Special)
 > - [NOTE]
-> - This is found on Settings ~ Accessibility ~ Visability Enhancements.
+> - You can get this in the Settings > Accessibility > Visiblity Enhancements.
 ```
 <SEC_FLOATING_FEATURE_GRAPHICS_SUPPORT_RELUMINO_EFFECT_FLAG>TRUE</SEC_FLOATING_FEATURE_GRAPHICS_SUPPORT_RELUMINO_EFFECT_FLAG>
 ```
+
 ### 24. Battery BSOH settings
 > - [NOTE]
-> - All credit goes to UNICA
-> - Settings ~ About Phone / Tablet ~ Battery Information.
+> - All the credit goes to <a href="https://github.com/salvogiangri/">Salvo</a>, the UN1CA ROM Lead developer / founder.
+> - And this thing is found under the Settings > About Phone / Tablet > Battery Information.
 ```
 <SEC_FLOATING_FEATURE_BATTERY_SUPPORT_BSOH_SETTINGS>TRUE</SEC_FLOATING_FEATURE_BATTERY_SUPPORT_BSOH_SETTINGS>
 ```
