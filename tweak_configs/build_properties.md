@@ -3,13 +3,13 @@ Add these lines in Build.prop, which is located in system folder.
 
 > - We have some good bootanimations here too, like the one from the <a href="https://github.com/forsaken-heart24/FLOSSIS/blob/main/tweak_configs/ROG_bootanimation.tar.gz">ROG devices</a> and one from the <a href="https://github.com/forsaken-heart24/FLOSSIS/blob/main/tweak_configs/Cyberpunk.tar.gz">OnePlus Cyberpunk Edition</a> (you have to extract and copy it over by yourself) and those bootanimation(s) is built for 2340x1080 resolution devices, use it if it works perfectly.
 
-### ⁍ increase or decrease the bootanimation FPS (useful if you have an bootanimation with more frames)
+### ⁍ increase or decrease the bootanimation FPS (useful if you have an bootanimation with more frames like the one from above)
 ```
 boot.fps=xx # should be an integer like 60 or smth lower than it.
 shutdown.fps=xx # should be an integer like 60 or smth lower than it.
 ```
 
-### ⁍ Use Dithering pattern for rendering and playbacks, better display quality but it lowers the overall performance.
+### ⁍ Use Dithering pattern for rendering and playbacks, better quality but it lowers the overall raw performance on those use cases.
 ```
 persist.sys.use_dithering=1
 ```
@@ -45,12 +45,12 @@ persist.log.ewlogd=0
 persist.sys.lmk.reportkills=false
 ```
 
-### ⁍ Video Acceleration Enabled And HW debugging (Will improve playback performance)
+### ⁍ Enable Hardware video acceleration (Will improve playback performance, but not all the cases)
 ```
 debug.hwui.renderer=skiagl
 video.accelerate.hw=1
 debug.sf.hw=1
-debug.performance.tuning=1
+debug.performance.tuning=0
 debug.egl.hw=1
 debug.composition.type=gpu
 ```
@@ -106,4 +106,34 @@ ro.ril.wake_lock_timeout=10000
 > - This flag requires kernel support & some plugins.
 ```
 ro.usb.uvc.enabled=true
+```
+
+### ⁍ Change the Network logger(s) levels from DEBUG to SILENT
+> [!NOTE]  
+> - Improves performance and device stability, it's generic and it works on all oem devices
+> - The below mentioned flags should've existed or not, but if that exists then change it's value from ' D ' , ' I ' or ' V ' (most of the time it's D) to ' S '
+```
+log.tag.ConnectivityManager=S
+log.tag.ConnectivityService=S
+log.tag.NetworkLogger=S
+log.tag.IptablesRestoreController=S
+log.tag.ClatdController=S
+```
+
+### ⁍ Change the default USB Configuration.
+> [!NOTE] 
+> - Some of the mentioned configs can be used to steal your information if you're pc is infected and you authorised your pc in ADB environment, do with pre-caution!
+
+> This flag has many use cases but here's the list of the avaliable flag values :
+
+> mtp : Sets the USB mode to Media Transfer Protocol, which allows the device to be used as a portable media player.
+
+> ptp : Sets the USB mode to Picture Transfer Protocol, which allows the device to be used as a digital camera.
+
+> adb : Enables USB debugging mode, which is useful for developers.
+
+> rndis : Enables the device to act as a network adapter, allowing it to be used as a USB Ethernet adapter.
+
+```
+persist.sys.usb.config=your_desired_flag_value_here # for example, mtp,adb
 ```
