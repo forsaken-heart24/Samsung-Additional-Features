@@ -48,10 +48,10 @@ Add these lines in system/etc/floating_feature.xml (One UI 4 or higher) or vendo
 <SEC_FLOATING_FEATURE_SYSTEM_SUPPORT_ENHANCED_CPU_RESPONSIVENESS>TRUE</SEC_FLOATING_FEATURE_SYSTEM_SUPPORT_ENHANCED_CPU_RESPONSIVENESS>
 ```
 
-### 06. Enable Extra Screen Modes (Might break the original amoled colors, and it got discontinued after the OneUI 6.0 revision and it might put your ROM into an bootloop if you try it
+### 06. Enable Extra Screen Modes (it might break the original amoled colors so anyways, it's deprecated after the OneUI 6 revision(s) and it might put your ROM into an bootloop if you try it to get it.
 > [!NOTE]  
-> This feature requires mdNIE support on the ROM and maybe the device to get it workin' under the hood!
-> if you device have any of those screen modes mentioned below, it means that it might have an proper mdNIE feature.
+> This feature requires proper or bare minimum mdNIE support on the ROM and maybe the device to get it workin' properly
+> if your device have any of those screen modes mentioned below, it means that it might have a proper or bare minimum support of the mdNIE feature.
 > - Adaptive display
 > - AMOLED cinema
 > - AMOLED photo
@@ -59,13 +59,13 @@ Add these lines in system/etc/floating_feature.xml (One UI 4 or higher) or vendo
 > - Vivid 
 
 > [!NOTE]
-> And finally if some of the modes are not found under the screen modes on the display settings it means that it has the mdNIE support at bare minimum.
+> And finally if some of the modes aren't under the screen modes on the display settings of your device, it usually means that the device has the mdNIE support at bare minimum.
 
-> Anyways, let's get into how to get this thing in your device -
+> Anyways, let's get into how to get this thing in your device.
 
-> Step 1 - Search for this line ```<SEC_FLOATING_FEATURE_LCD_SUPPORT_MDNIE_HW>``` and make it's value from "TRUE" to "FALSE"
+> Step 1 - Search for this line ```<SEC_FLOATING_FEATURE_LCD_SUPPORT_MDNIE_HW>``` and change it's value from "TRUE" to "FALSE"
 
-> Step 2 - Search for this line ```<SEC_FLOATING_FEATURE_LCD_SUPPORT_WIDE_COLOR_GAMUT>``` and make it's value from "TRUE" to "FALSE"
+> Step 2 - Search for this line ```<SEC_FLOATING_FEATURE_LCD_SUPPORT_WIDE_COLOR_GAMUT>``` and change it's value from "TRUE" to "FALSE"
 
 ### 07. Enable Smooth Scroll of the Surfaceflinger
 ```
@@ -74,14 +74,14 @@ Add these lines in system/etc/floating_feature.xml (One UI 4 or higher) or vendo
 
 # Display :
 
-### 01. Enable Flagship Edge Lighting+ Animations (Needs OneUI 2.x)
+### 01. Enable Flagship Edge Lighting Animations on OneUI 2.x
 > [!NOTE]  
 > - Search for the following line in floating_feature.xml ```<SEC_FLOATING_FEATURE_COMMON_CONFIG_EDGE>``` And remove  "-basic_lighting" line, then it should look like the one below.
 ```
 <SEC_FLOATING_FEATURE_COMMON_CONFIG_EDGE>people,task,circle,panel,-edgefeeds,edgelighting_v2,debug,cornerR:6.2,search,phonecolor,dot_bottom</SEC_FLOATING_FEATURE_COMMON_CONFIG_EDGE>
 ```
 
-### 02. Enable Flagship Edge Lighting+ Animations (Needs OneUI 3.x)
+### 02. Enable Flagship Edge Lighting Animations on OneUI 3.x
 ```
 <SEC_FLOATING_FEATURE_SYSTEMUI_CONFIG_EDGELIGHTING_FRAME_EFFECT>frame_effect</SEC_FLOATING_FEATURE_SYSTEMUI_CONFIG_EDGELIGHTING_FRAME_EFFECT>
 ```
@@ -89,8 +89,9 @@ Add these lines in system/etc/floating_feature.xml (One UI 4 or higher) or vendo
 ### 03. Enable AOD Clock Transition Animation
 > [!NOTE]  
 > - Search for the following line in floating_feature.xml ```<SEC_FLOATING_FEATURE_FRAMEWORK_CONFIG_AOD_ITEM>``` And add "clocktransition" and "activeclock=4" in the following line, then it should look like the one below.
+> - The "x" on the aodversion means that different rom and devices have a different version of the AOD thing.
 ```
-<SEC_FLOATING_FEATURE_FRAMEWORK_CONFIG_AOD_ITEM>aodversion=7,clearcoveroff,clocktransition,activeclock=4</SEC_FLOATING_FEATURE_FRAMEWORK_CONFIG_AOD_ITEM>
+<SEC_FLOATING_FEATURE_FRAMEWORK_CONFIG_AOD_ITEM>aodversion=x,clocktransition,activeclock=4</SEC_FLOATING_FEATURE_FRAMEWORK_CONFIG_AOD_ITEM>
 ```
 
 ### 04. Enable Multiwindow tray
@@ -98,7 +99,7 @@ Add these lines in system/etc/floating_feature.xml (One UI 4 or higher) or vendo
 <SEC_FLOATING_FEATURE_COMMON_CONFIG_MULTIWINDOW_TRAY>TRUE</SEC_FLOATING_FEATURE_COMMON_CONFIG_MULTIWINDOW_TRAY>
 ```
 
-### 05. Make 60Hz as the default refresh rate.
+### 05. Force 60Hz as the default refresh rate instead of the peak refresh rate.
 ```
 <SEC_FLOATING_FEATURE_LCD_CONFIG_HFR_DEFAULT_REFRESH_RATE>60</SEC_FLOATING_FEATURE_LCD_CONFIG_HFR_DEFAULT_REFRESH_RATE>
 <SEC_FLOATING_FEATURE_LCD_CONFIG_HFR_MODE>0</SEC_FLOATING_FEATURE_LCD_CONFIG_HFR_MODE>
@@ -114,12 +115,12 @@ Add these lines in system/etc/floating_feature.xml (One UI 4 or higher) or vendo
 <SEC_FLOATING_FEATURE_FRAMEWORK_CONFIG_SCREEN_RECORDER_ITEM>-pip</SEC_FLOATING_FEATURE_FRAMEWORK_CONFIG_SCREEN_RECORDER_ITEM>
 ```
 
-### 07. Enable Partial Blur (Needs OneUI 3.x)
+### 07. Enable Partial Blur (requires OneUI 3.x)
 ```
 <SEC_FLOATING_FEATURE_GRAPHICS_SUPPORT_PARTIAL_BLUR>TRUE</SEC_FLOATING_FEATURE_GRAPHICS_SUPPORT_PARTIAL_BLUR>
 ```
 
-### 08. Enable Semi Native Blur (Needs OneUI 3.x)
+### 08. Enable Semi Native Blur (requires OneUI 3.x)
 ```
 <SEC_FLOATING_FEATURE_GRAPHICS_SUPPORT_CAPTURED_BLUR>TRUE</SEC_FLOATING_FEATURE_GRAPHICS_SUPPORT_CAPTURED_BLUR>
 ```
@@ -131,7 +132,7 @@ Add these lines in system/etc/floating_feature.xml (One UI 4 or higher) or vendo
 <SEC_FLOATING_FEATURE_COMMON_CONFIG_DYN_RESOLUTION_CONTROL>WQHD,FHD,HD</SEC_FLOATING_FEATURE_COMMON_CONFIG_DYN_RESOLUTION_CONTROL>
 ```
 
-### 10. Enable darker Dark Mode (Needs OneUI 2.5)
+### 10. Enable darker Dark Mode (requires OneUI 2.5)
 > [!NOTE]  
 > - Remember this code won't work after OneUI2.5+ (it's shifted to Bixby routines after that)
 ```
