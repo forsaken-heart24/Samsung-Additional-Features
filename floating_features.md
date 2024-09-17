@@ -51,13 +51,15 @@ Add these lines in system/etc/floating_feature.xml (One UI 4 or higher) or vendo
 ### 06. Enable Extra Screen Modes (Might break the original amoled colors, and it got discontinued after the OneUI 6.0 revision and it might put your ROM into an bootloop if you try it
 > [!NOTE]  
 > This feature requires mdNIE support on the ROM and maybe the device to get it workin' under the hood!
-> if you device have any of those screen modes mentined below, it means that it might have an proper mdNIE feature.
+> if you device have any of those screen modes mentioned below, it means that it might have an proper mdNIE feature.
 > - Adaptive display
 > - AMOLED cinema
 > - AMOLED photo
 > - Basic
-> - Vivid
-> and finally if you of the modes are not found under the screen modes settings on the display settings it means that it has the mdNIE support at bare minimum.
+> - Vivid 
+
+> [!NOTE]
+> And finally if some of the modes are not found under the screen modes on the display settings it means that it has the mdNIE support at bare minimum.
 
 > Anyways, let's get into how to get this thing in your device -
 
