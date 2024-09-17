@@ -135,5 +135,5 @@ log.tag.ClatdController=S
 > rndis : Enables the device to act as a network adapter, allowing it to be used as a USB Ethernet adapter.
 
 ```
-persist.sys.usb.config=your_desired_flag_value_here # for example, mtp,adb
+persist.sys.usb.config=your_desired_flag_value_here # for example, mtp,adb or just the mtp alone
 ```
