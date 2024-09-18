@@ -14,37 +14,6 @@ shutdown.fps=xx # should be an integer like 60 or smth lower than it.
 persist.sys.use_dithering=1
 ```
 
-### ⁍ Disables built in error reporting.
-```
-profiler.force_disable_err_rpt=1
-profiler.force_disable_ulog=1
-```
-
-### ⁍ Disables logcat, improves performance significantly.
-```
-logcat.live=disable
-```
-
-### ⁍ Disables Network Dropdump, might have an performance improvement.
-```
-sys.dropdump.on=Off
-```
-
-### ⁍ Disables atrace logger, might have an performance improvement.
-```
-persist.debug.atrace.boottrace=0
-```
-
-### ⁍ Disables samsung's ewlog logger, might have an performance improvement.
-```
-persist.log.ewlogd=0
-```
-
-### Disables unnecessary debugging
-```
-persist.sys.lmk.reportkills=false
-```
-
 ### ⁍ Enable Hardware video acceleration (Will improve playback performance, but not all the cases)
 ```
 debug.hwui.renderer=skiagl
@@ -58,11 +27,6 @@ debug.composition.type=gpu
 ### ⁍ Enable the newer google assistant.
 ```
 ro.opa.eligible_device=true
-```
-
-### ⁍ Safetynet Fix
-```
-ro.knox.enhance.zygote.aslr=1
 ```
 
 ### ⁍ Disable Knox
@@ -108,6 +72,78 @@ ro.ril.wake_lock_timeout=10000
 ro.usb.uvc.enabled=true
 ```
 
+### ⁍ Change the default USB Configuration.
+> [!NOTE] 
+> - Some of the mentioned flag values can be used to steal your information if you're pc is infected and you authorised your pc in ADB environment, do with pre-caution!
+
+> This flag has many use cases but here's the list of the avaliable flag values :
+
+> mtp : Sets the USB mode to Media Transfer Protocol, which allows the device to enable to copy , move and delete files inside the device's storage device(s)
+
+> ptp : Sets the USB mode to Picture Transfer Protocol, which only allows the user to copy the DCIM and Pictures folder from the device.
+
+> adb : Enables USB debugging mode, which is useful for developers.
+
+> rndis : Enables the device to act as a network adapter, allowing it to be used as a USB Ethernet adapter.
+
+```
+persist.sys.usb.config=your_desired_flag_value_here # for example, mtp,adb or just the mtp alone
+```
+
+# Advanced System Build Property Tweaks
+> [!NOTE] 
+> - Disabling these might improve the performance
+> - Some might trigger an unusual event which causes the system to behave weird, you're warned and we're not responsible for any damages.
+
+### ⁍ Disables built in error reporting.
+```
+profiler.force_disable_err_rpt=1
+profiler.force_disable_ulog=1
+```
+
+### ⁍ Disables logcat
+> [!NOTE] 
+> - The logcat daemon on Android devices serves a crucial purpose in the Android system's logging and debugging infrastructure.
+```
+logcat.live=disable
+```
+
+### ⁍ Disables Network Dropdump
+```
+sys.dropdump.on=Off
+```
+
+### ⁍ Disables google's atrace logger
+> [!NOTE] 
+> - The atrace command in Android is a powerful tool used for system-wide tracing and performance analysis. 
+```
+persist.debug.atrace.boottrace=0
+```
+
+### ⁍ Disables samsung's ewlog logger
+> [!NOTE] 
+> - According to a web source, The ewlogd service is an important component in Samsung's device monitoring and troubleshooting ecosystem. 
+> - By collecting and managing emergency logs, it helps Samsung and service providers to quickly identify and address critical issues that users may encounter on their Samsung Android devices.
+```
+persist.log.ewlogd=0
+```
+
+### ⁍ Disables google's lpdumpd logger
+> [!NOTE] 
+> - According to some web sources, lpdumpd is a crucial service for gathering comprehensive system information and logs, which are essential for debugging, troubleshooting and improving the overall performance and stability of Android devices.
+```
+sys.lpdumpd=0
+```
+
+### ⁍ Disables google's perfetto logger, namely traced and traced_probes.
+> [!NOTE] 
+> - According to web sources, The purpose of these services is to provide a comprehensive tracing infrastructure for the Android platform. This allows developers, system engineers, and support teams to:
+> - Analyze system performance and identify performance bottlenecks, Debug complex issues & Optimize the Android platform
+```
+persist.device_config.global_settings.sys_traced=0
+persist.traced.enable=0
+```
+
 ### ⁍ Change the Network logger(s) levels from DEBUG to SILENT
 > [!NOTE]  
 > - Improves performance and device stability, it's generic and it works on all oem devices
@@ -120,20 +156,9 @@ log.tag.IptablesRestoreController=S
 log.tag.ClatdController=S
 ```
 
-### ⁍ Change the default USB Configuration.
-> [!NOTE] 
-> - Some of the mentioned configs can be used to steal your information if you're pc is infected and you authorised your pc in ADB environment, do with pre-caution!
-
-> This flag has many use cases but here's the list of the avaliable flag values :
-
-> mtp : Sets the USB mode to Media Transfer Protocol, which allows the device to be used as a portable media player.
-
-> ptp : Sets the USB mode to Picture Transfer Protocol, which allows the device to be used as a digital camera.
-
-> adb : Enables USB debugging mode, which is useful for developers.
-
-> rndis : Enables the device to act as a network adapter, allowing it to be used as a USB Ethernet adapter.
-
+### Disables unnecessary debugging
+> [!NOTE]
+> - Stops Low memory killer service from reporting alot.
 ```
-persist.sys.usb.config=your_desired_flag_value_here # for example, mtp,adb or just the mtp alone
+persist.sys.lmk.reportkills=false
 ```
