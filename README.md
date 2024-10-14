@@ -1,15 +1,21 @@
-> [!NOTE]  
-> - <a href="https://t.me/equinoxfromlunaandetclore/54">if you have any issues or doubts on this how-to-guide, please join our chat to resolve your issues.</a>
+# Samsung Extra Cool Features! 🚀✨
 
-> - Some of the stuffs in here are from the <a href="https://github.com/el0xren/Samsung_Additional_Features">el0xren's repo</a> & <a href="https://github.com/ravindu644/Samsung_Additional_Features">Ravindu's repo</a> i just added and removed some of the stuffs from there, if you want me to take this content down mail dumb.alt.luna.b.realm.io24@outlook.com or dm me in my mentioned social pages.
-
-# Samsung Additional Features
 <img src="https://telegra.ph/file/5ac41e6a89dbce3b20452.jpg" width="100%">
-	<p align="center"> Here you can find how to enable additional features in your samsung device with the help of the floating feature, build prop, csc feature tweak(s) in your Samsung Device (Supports One UI 2.5 or higher)</p>
-	<p align="center">I am not responsible if this bricks your phone or causes thermonuclear war and ends the world as we know it.</p>
-	<hr>
-		<li>Floating Feature Tweaks - <a href="https://github.com/forsaken-heart24/Samsung-Additional-Features/blob/main/tweak_configs/floating_features.md">Here</a>
-		<li>CSC Feature Tweaks - <a href="https://github.com/forsaken-heart24/Samsung-Additional-Features/blob/main/tweak_configs/csctweaks.md">Here</a>
-		<li>Build prop Tweaks - <a href="https://github.com/forsaken-heart24/Samsung-Additional-Features/blob/main/tweak_configs/build_properties.md">Here</a> 
-	</hr>
-</img>
+
+Welcome to the ultimate guide to supercharge your Samsung device! 💥 If you’ve got any questions or need a hand, come hang out in our chat! ➡️ [Join the fun here!](https://t.me/equinoxfromlunaandetclore/54)
+
+## What’s This Guide About? 🤔
+
+Think of this guide as your treasure map to unlocking mega-cool features on your phone! 🗺️✨ I took some inspiration from [el0xren's repo](https://github.com/el0xren/Samsung_Additional_Features) and [Ravindu's repo](https://github.com/ravindu644/Samsung_Additional_Features) and added my own magic to it! If you want something taken down, just hit me up at dumb.alt.luna.b.realm.io24@outlook.com or DM me on my socials! 💌
+
+### Ready to Make Your Phone Awesome? 🎮
+
+This works for One UI 2.5 and up! But hey, just a heads up: I’m not responsible if your phone starts a dance party or if we accidentally call aliens! 👽💥
+
+## 🌟 Time to Unlock the Hidden Gems in Your Settings! 🔧💎
+
+- **🌬️ Floating Features**: Want to unlock those hidden system settings? ✨ Check it out [here](https://github.com/forsaken-heart24/Samsung-Additional-Features/blob/main/tweak_configs/floating_features.md)! It’s like giving your screen a fresh makeover while accessing cool features.
+
+- **🌍 CSC Features**: Ready to dive into more hidden settings? 🌟 Explore all the amazing tweaks you can do [here](https://github.com/forsaken-heart24/Samsung-Additional-Features/blob/main/tweak_configs/csctweaks.md) and unleash your Samsung’s true potential!
+
+- **⚙️ Build Prop Tweaks**: These tweaks are your go-to for some miscellaneous enhancements! 🔧💎 Check them out [here](https://github.com/forsaken-heart24/Samsung-Additional-Features/blob/main/tweak_configs/build_properties.md) and give your device that extra polish.
