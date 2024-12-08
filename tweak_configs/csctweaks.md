@@ -3,7 +3,7 @@
 
 > - if incase you have the older a-only slot device, you have to add those into the product/omc/(your carrier/region, ex ATT)/conf/cscfeature.xml
 
-> - In Higher One UI versions, you need to decrypt the cscfeature.xml and encrypt it after editing it, So <a href="https://github.com/forsaken-heart24/OMCDecoder">use this tool to decode & encrypt your csc file.</a>
+> - In Higher One UI versions, you need to decrypt the cscfeature.xml and encrypt it after editing it, So <a href="https://github.com/ravindu644/OmcTextDecoder/">use this tool to decode & encrypt your csc file.</a>
 
 > - Don't add anything unless you don't know what are you doing and what those added code(s) does, cuz it might crash some stuffs on the system.
 
