@@ -24,13 +24,7 @@ Add these lines in system/etc/floating_feature.xml (One UI 4 or higher) or vendo
 > [!NOTE]  
 > - Part of system logging, Search for the following line in floating_feature.xml (Discontinued after OneUI5)```<SEC_FLOATING_FEATURE_CONTACTS_SUPPORT_MESSAGE_LOGS>``` And change value from "TRUE" to "FALSE" and it should look like the one in the below.
 ```
-<SEC_FLOATING_FEATURE_CONTACTS_SUPPORT_MESSAGE_LOGS>FALSE</SEC_FLOATING_FEATURE_CONTACTS_SUPPORT_MESSAGE_LOGS>
-```
-
-> [!NOTE]  
-> - Besure to add or change the value of the below mentioned flag too.
-```
-<SEC_FLOATING_FEATURE_SYSTEM_CONFIG_SYSINT_DQA_LOGLEVEL>0</SEC_FLOATING_FEATURE_SYSTEM_CONFIG_SYSINT_DQA_LOGLEVEL>
+<SEC_FLOATING_FEATURE_SYSTEM_CONFIG_SYSINT_DQA_LOGLEVEL>2</SEC_FLOATING_FEATURE_SYSTEM_CONFIG_SYSINT_DQA_LOGLEVEL>
 ```
 
 ### 04. Enable Performance Profile
